@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .sqStroke {
+      @apply stroke-teal-400;
+      stroke-dasharray:990;
+  }
+}
