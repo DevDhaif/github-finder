@@ -1,5 +1,6 @@
 import React from 'react';
 import { useEffect,useState } from 'react';
+import { FaSpinner } from 'react-icons/fa';
 import Spinner from '../layout/Spinner';
 import UserItem from './UserItem';
 function UserResults() {
@@ -21,7 +22,7 @@ function UserResults() {
         const data=await response.json()
 
         setUsers(data)
-        setLoading(false)
+        setLoading(true)
     }
     if(!loading){
   return <div>
@@ -41,7 +42,12 @@ function UserResults() {
   
   </div>}
   else {
-      return <Spinner />
+      return (
+        <div className='mx-auto flex justify-center'>
+        <FaSpinner className='h-20 w-20 animate-load fill-violet-500 ease-linear'/>
+
+        </div>
+      )
   }
 }
 

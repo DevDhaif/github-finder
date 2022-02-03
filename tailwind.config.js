@@ -32,6 +32,14 @@ module.exports = {
           "0%, 100%": { transform: "rotate(-3deg)" },
           "50%": { transform: "rotate(3deg)" },
         },
+        load:{
+          "from": {
+            transform: "rotate(0deg)"
+          },
+          "to":{
+            transform:("rotate(360deg)")
+          }
+        },
         animate: {
           "0%": {
             opacity: "0",
@@ -101,6 +109,7 @@ module.exports = {
         wiggle: "wiggle 1.2s ease-in-out infinite",
         animate: "animate 1.2s linear  ",
         animateb: "animateb 1.2s linear  ",
+        load:"load 1s linear infinite"
       },
       // animation: { animate: "animate 2s cubic-besizer(0,0.23,1,0.1)" }
       transitionTimingFunction: {
