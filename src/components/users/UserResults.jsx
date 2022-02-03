@@ -1,6 +1,6 @@
 import React from 'react';
 import { useEffect,useState } from 'react';
-import spinner from '../layout/Spinner';
+import Spinner from '../layout/Spinner';
 function UserResults() {
 
     const [users,setUsers]=useState([])
@@ -20,7 +20,7 @@ function UserResults() {
         const data=await response.json()
 
         setUsers(data)
-        setLoading(true)
+        setLoading(false)
     }
     if(!loading){
   return <div>
@@ -39,7 +39,7 @@ function UserResults() {
   
   </div>}
   else {
-      return <spinner />
+      return <Spinner />
   }
 }
 

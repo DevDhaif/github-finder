@@ -1,8 +1,8 @@
-import spinner from './assets/Rolling.gif'
-function spinner() {
+import Loader from './assets/spinner.gif'
+function Spinner() {
   return <div>
-    <img src={spinner} alt="" />
+    <img src={Loader} alt="" />
   </div>;
 }
 
-export default spinner;
+export default Spinner;
