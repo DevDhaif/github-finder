@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 function NotFound() {
   return <div className='hero'>
   <div className="text-center hero-content">
-    <div className="max-w-lg">
+    <div className="max-w-lg z-10 ">
       <h1 className="text-6xl font-bold mb-8">
         Not Found
       </h1>
@@ -16,23 +16,23 @@ function NotFound() {
       
       </Link>
     </div>
-          <div className='flex flex-col justify-center  items-center'>
-          <svg className='sqStroke animate-animate fill-sky-700/40 ease-linear'
-          width="100"
-              height="250"
+          <div className='absolute mx-auto -ml-14 -z-10 opacity-30 top-15  flex flex-col justify-center  items-center'>
+          <svg className='sqStroke animate-animate fill-violet-500 ease-linear'
+          width="350"
+              height="500"
                viewBox="0 0 102 468"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg">
-                <rect x="4" y="4" width="94" height="460" rx="46"  strokeWidth="8"/>
+                <rect x="4" y="4" width="145" height="450" rx="46"  strokeWidth="8"/>
                 </svg>
 
-                <svg className='sqStroke animate-animateb fill-sky-700/40 ease-linear'
-                    width="100" 
-                    height="100" 
+                <svg className='sqStroke mt-6 -mr-24 left-1 animate-animateb fill-violet-500 ease-linear'
+                    width="220" 
+                    height="235   " 
                     viewBox="0 0 100 100" 
                     fill="none" 
                     xmlns="http://www.w3.org/2000/svg">
-                    <rect x="25" y="10" width="50" height="50" rx="46"  strokeWidth="4"/>
+                    <rect x="2" y="1" width="80" height="80" rx="46"  strokeWidth="4"/>
                 </svg>
 
           </div>

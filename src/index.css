@@ -5,7 +5,7 @@
 @layer components {
     .sqStroke {
       @apply stroke-gray-200;
-      stroke-dasharray:1100;
+      stroke-dasharray:1200;
       /* fill:red; */
       /* animation: animate 2s cubic-besizer(0,0.23,1,0.1);
       opacity: 10; */
