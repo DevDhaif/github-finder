@@ -36,6 +36,9 @@ module.exports = {
           "0%": {
             opacity: "0",
             "stroke-dasharray": 200,
+            
+            
+
           },
           "25%": {
             opacity: "10",
@@ -51,17 +54,46 @@ module.exports = {
           },
           "100%": {
             opacity: "10",
-            "stroke-dasharray": 1000,
+            "stroke-dasharray": 1100,
+           
           },
+          
+        },
+        animateb: {
+          "0%": {
+            opacity: "0",
+            "stroke-dasharray": 0,
+            
+
+          },
+          "25%": {
+            opacity: "10",
+            "stroke-dasharray": 40,
+          },
+          "50%": {
+            opacity: "10",
+            "stroke-dasharray": 80,
+          },
+          "75%": {
+            opacity: " 10",
+            "stroke-dasharray": 120,
+          },
+          "100%": {
+            opacity: "10",
+            "stroke-dasharray": 160,
+           
+          },
+          
         },
       },
       animation: {
         wiggle: "wiggle 1s ease-in-out infinite",
         animate: "animate 1.2s linear  infinite",
+        animateb: "animateb 1.2s linear  infinite",
       },
       // animation: { animate: "animate 2s cubic-besizer(0,0.23,1,0.1)" }
       transitionTimingFunction: {
-        "stro": "cubic-bezier(.83,.16,.87,.65)",
+        stro: "cubic-bezier(.83,.16,.87,.65)",
       },
     },
   },

@@ -16,23 +16,27 @@ function NotFound() {
       
       </Link>
     </div>
-    <svg
-                class="sqStroke animate-animate hover:bg-red-400 rounded-md ease-linear"
-                width="250"
-                height="250"
-                viewBox="0 0 250 250"
+          <div className='flex flex-col justify-center  items-center'>
+          <svg className='sqStroke animate-animate fill-sky-700/40 ease-linear'
+          width="100"
+              height="250"
+               viewBox="0 0 102 468"
                 fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                >
-                <rect
-                id="Rectangle 1"
-                x="1.5"
-                y="1.5"
-                width="247"
-                height="247"
-                strokeWidth="3"
-                />
-            </svg>
+                xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="4" width="94" height="460" rx="46"  strokeWidth="8"/>
+                </svg>
+
+                <svg className='sqStroke animate-animateb fill-sky-700/40 ease-linear'
+                    width="100" 
+                    height="100" 
+                    viewBox="0 0 100 100" 
+                    fill="none" 
+                    xmlns="http://www.w3.org/2000/svg">
+                    <rect x="25" y="10" width="50" height="50" rx="46"  strokeWidth="4"/>
+                </svg>
+
+          </div>
+
   </div>
 
   </div>;

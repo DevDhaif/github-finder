@@ -4,34 +4,18 @@
 
 @layer components {
     .sqStroke {
-      @apply stroke-teal-400;
-      stroke-dasharray:500;
+      @apply stroke-gray-200;
+      stroke-dasharray:1100;
+      /* fill:red; */
       /* animation: animate 2s cubic-besizer(0,0.23,1,0.1);
       opacity: 10; */
     }
-    @keyframes animate{
-      0% {
-        opacity: 10;
-        stroke-dasharray:990;
-      }
-      25% {
-        opacity: 10;
-        stroke-dasharray:750;
-      }
-      50% {
-        opacity: 10;
-        stroke-dasharray:500;
-      }
-      75% {
-        opacity: 10;
-        stroke-dasharray:250;
-      }
-      100% {
-        opacity: 10;
-        stroke-dasharray:0;
-      }
-
-    
+    .sqStroke2{
+      @apply stroke-gray-600;
+      stroke-dasharray:160;
+      /* fill:red; */
     }
+    
+    
   }
   
