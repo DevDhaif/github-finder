@@ -16,8 +16,8 @@ function NotFound() {
       
       </Link>
     </div>
-          <div className='absolute mx-auto -ml-14 -z-10 opacity-30 top-15  flex flex-col justify-center  items-center'>
-          <svg className='sqStroke animate-animate fill-violet-500 ease-linear'
+          <div className='absolute mx-auto  -ml-14 sm:w-40 -z-10  top-15  flex flex-col justify-center  items-center'>
+          <svg className='sqStroke animate-animate md:fill-green-700 lg:fill-red-500 xl:fill-violet-700 sm:fill-orange-500 fill-violet-500 ease-linear'
           width="350"
               height="500"
                viewBox="0 0 102 468"

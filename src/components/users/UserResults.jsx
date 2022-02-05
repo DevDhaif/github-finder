@@ -1,51 +1,35 @@
-import React from 'react';
-import { useEffect,useState } from 'react';
+import { useEffect,useContext } from 'react';
 import { FaSpinner } from 'react-icons/fa';
-import Spinner from '../layout/Spinner';
 import UserItem from './UserItem';
+import GithubContext from '../../context/github/GithubContext';
+
 function UserResults() {
-
-    const [users,setUsers]=useState([])
-    const [loading,setLoading]=useState(true)
-
-
-    useEffect(()=>{
-        fetchUsers()
-    },[])
-
-    const fetchUsers=async ()=>{
-        const response=await fetch(`${process.env.REACT_APP_GITHUB_URL}/users`,{
-           headers:{
-               Authorization:`token ${process.env.REACT_APP_GITHUB_TOKEN}`
-           } }
-        )
-        const data=await response.json()
-
-        setUsers(data)
-        setLoading(true)
-    }
-    if(!loading){
-  return <div>
+  const {users,loading,fetchUsers}=useContext
+  (GithubContext)
   
-           <h1>
-           user result
-           
-           </h1>
+  useEffect(()=>{
+    fetchUsers()
+    
+  },[])
+
+    
+    if(!loading){
+  return (
            <div className='grid grid-cols-1 gap-8 xl:grid-cols-4 lg:grid-cols-3  md:grid-cols-2'>
 
             {users.map((user)=>(
-                <>
+                
                 <UserItem key={user.id} user={user}/>
-                </>
+                
             ))}
            </div>
-  
-  </div>}
+  )
+        }
   else {
       return (
-        <div className='mx-auto flex justify-center'>
-        <FaSpinner className='h-20 w-20 animate-load fill-violet-500 ease-linear'/>
-
+        <div className='mx-auto flex flex-col items-center space-y-3 justify-center'>
+            <FaSpinner className='h-16 w-16 animate-load fill-teal-400 ease-linear'/>
+            <h3>Please wait...</h3>
         </div>
       )
   }
