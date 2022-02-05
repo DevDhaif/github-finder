@@ -1,16 +1,36 @@
-import { useEffect,useContext } from 'react';
+import { useContext,useState, useEffect } from 'react';
 import { FaSpinner } from 'react-icons/fa';
 import UserItem from './UserItem';
 import GithubContext from '../../context/github/GithubContext';
 
 function UserResults() {
-  const {users,loading,fetchUsers}=useContext
+  const {users,loading,fetchUsers,ff}=useContext
   (GithubContext)
+
+// const GITHUB_URL = process.env.REACT_APP_GITHUB_URL
+// const GITHUB_TOKEN = process.env.REACT_APP_GITHUB_TOKEN
+
+
+// const [users, setUsers] = useState([]);
+//   const [loading, setLoading] = useState(true);
   
-  useEffect(()=>{
-    fetchUsers()
-    
-  },[])
+ 
+//   const fetchUsers = async () => {
+//     const response = await fetch(`${GITHUB_URL}/users`, {
+//       headers: {
+//         Authorization: `token ${GITHUB_TOKEN}`,
+//       },
+//     });
+
+//     const data = await response.json();
+
+//     setUsers(data);
+//     setLoading(false);
+//   };
+    useEffect(()=>{
+        fetchUsers()
+        ff()
+    },[])
 
     
     if(!loading){

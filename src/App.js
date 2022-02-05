@@ -1,9 +1,8 @@
-import { useEffect,useContext } from 'react';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Footer from "./components/layout/Footer";
 import Navbar from "./components/layout/Navbar";
-import About from "./pages/About";
+import Footer from "./components/layout/Footer";
 import Home from "./pages/Home";
+import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 import GithubContext, { GithubProvider } from "./context/github/GithubContext";
 
