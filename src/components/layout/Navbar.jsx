@@ -1,8 +1,43 @@
 import { BrowserRouter as Router ,Route,Link} from "react-router-dom";
 import {FaGithub} from 'react-icons/fa'
 import PropTypes  from "prop-types";
+import { useEffect, useState } from "react";
 
 function Navbar({title}) {
+    const [emoji,setEmoji]=useState('🌞')
+    const themes=['cupcake'
+  ,'dark'
+  ,'cupcake'
+  ,'bumblebee'
+  ,'emerald'
+  ,'corporate'
+  ,'synthwave'
+  ,'retro'
+  ,'cyberpunk'
+  ,'valentine'
+  ,'halloween'
+  ,'garden'
+  ,'forest'
+  ,'aqua'
+  ,'lofi'
+  ,'pastel'
+  ,'fantasy'
+  ,'wireframe'
+  ,'black'
+  ,'luxury'
+  ,'dracula'
+  ,'cmyk']
+  const changeTheme=()=>{
+    document.documentElement.setAttribute('data-theme',themes[Math.floor(Math.random()*themes.length)])
+    if(emoji==='🌞' )
+    setEmoji('🌙')
+    else if(emoji==='🌙')
+    setEmoji('🌞')
+
+  }
+  useEffect(()=>{
+    console.log('app test');
+  },[])
   return (<nav className="navbar mb-8 shadow-lg bg-neutral text-neutral-content">
         <div className="container mx-auto">
         
@@ -14,6 +49,7 @@ function Navbar({title}) {
                     <div className="flex justify-end">
                         <Link to='/' className="btn btn-ghost hover:bg-teal-500 border-cyan-900 rounded-btn btn-sm">Home</Link>
                         <Link to='/about' className="btn btn-ghost rounded-btn btn-sm">about</Link>
+                    <button onClick={changeTheme}>{emoji}</button>
                     </div>
                 </div>
         </div>

@@ -4,7 +4,8 @@ import Footer from "./components/layout/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
-import GithubContext, { GithubProvider } from "./context/github/GithubContext";
+import  { GithubProvider } from "./context/github/GithubContext";
+import { useContext, useEffect } from "react";
 
 function App() {
   
