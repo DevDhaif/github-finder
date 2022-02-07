@@ -1,7 +1,8 @@
 import { BrowserRouter as Router ,Route,Link} from "react-router-dom";
-import {FaGithub} from 'react-icons/fa'
+import {FaGithub, FaMoon, FaSun, FaThemeco, FaThemeisle} from 'react-icons/fa'
 import PropTypes  from "prop-types";
 import { useEffect, useState } from "react";
+import ThemeChanger from "./ThemeChanger";
 
 function Navbar({title}) {
     const [emoji,setEmoji]=useState('🌞')
@@ -38,6 +39,7 @@ function Navbar({title}) {
   useEffect(()=>{
     console.log('app test');
   },[])
+
   return (<nav className="navbar mb-8 shadow-lg bg-neutral text-neutral-content">
         <div className="container mx-auto">
         
@@ -46,13 +48,15 @@ function Navbar({title}) {
                     <Link to='/' className="text-lg font-bold align-middle">{title}</Link>
                 </div>
                 <div className="flex-1 px-2 mx2">
-                    <div className="flex justify-end">
+                    <div id="navelements" className="flex justify-end">
+                    <ThemeChanger/>
                         <Link to='/' className="btn btn-ghost hover:bg-teal-500 border-cyan-900 rounded-btn btn-sm">Home</Link>
                         <Link to='/about' className="btn btn-ghost rounded-btn btn-sm">about</Link>
-                    <button onClick={changeTheme}>{emoji}</button>
                     </div>
                 </div>
         </div>
+      
+        
         </nav>)
 }
 Navbar.defaultProps={
