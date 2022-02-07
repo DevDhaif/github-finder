@@ -1,10 +1,10 @@
-import { useContext,useState, useEffect } from 'react';
+import { useContext} from 'react';
 import { FaSpinner } from 'react-icons/fa';
 import UserItem from './UserItem';
 import GithubContext from '../../context/github/GithubContext';
 
 function UserResults() {
-  const {users,loading,fetchUsers}=useContext(GithubContext)
+  const {users,loading}=useContext(GithubContext)
 
 // const GITHUB_URL = process.env.REACT_APP_GITHUB_URL
 // const GITHUB_TOKEN = process.env.REACT_APP_GITHUB_TOKEN
@@ -26,10 +26,10 @@ function UserResults() {
 //     setUsers(data);
 //     setLoading(false);
 //   };
-    useEffect(()=>{
-        fetchUsers()
+    // useEffect(()=>{
+    //     fetchUsers()
         
-    },[])
+    // },[])
 
     
     if(!loading){
@@ -49,6 +49,7 @@ function UserResults() {
         <div className='mx-auto flex flex-col items-center space-y-3 justify-center'>
             <FaSpinner className='h-16 w-16 animate-load fill-teal-400 ease-linear'/>
             <h3>Please wait...</h3>
+            
         </div>
       )
   }
