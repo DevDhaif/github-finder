@@ -3,7 +3,7 @@ import GithubContext from '../../context/github/GithubContext';
 import { FaSearch } from 'react-icons/fa';
 
 function UserSearch() {
-    const {users,searchUsers}=useContext(GithubContext)
+    const {users,searchUsers,deleteUsers}=useContext(GithubContext)
     const [text, setText] = useState('');
     const handleChange=(e)=>{setText(e.target.value)}
     const handleSubmit=(e)=>{
@@ -15,6 +15,9 @@ function UserSearch() {
             setText('')
             searchUsers(text)
         }
+    }
+    const handleDelete=()=>{
+        deleteUsers()
     }
     return (
             <div className='grid grid-cols-1 xl:grid-cols-2 lg:grid-cols-3 md:grid-cols-2 mb-8 gap-8'>
@@ -30,7 +33,7 @@ function UserSearch() {
                 </div>
                 {users.length>0 && (
                     <div>
-                        <button className='btn btn-ghost btn-lg'>Clear</button>
+                        <button onClick={handleDelete} className='btn btn-ghost btn-lg'>Clear</button>
                     </div>
                 )}
             </div>
