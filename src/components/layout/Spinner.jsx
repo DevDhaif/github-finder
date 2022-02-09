@@ -1,8 +1,13 @@
+import { FaSpinner } from 'react-icons/fa';
 import Loader from './assets/spinner.gif'
 function Spinner() {
   return <div>
-    <img src={Loader} alt="" />
-    
+ {/*<img src={Loader} alt="" />*/}
+ <div className='mx-auto flex flex-col items-center space-y-3 justify-center'>
+            <FaSpinner className='h-16 w-16 animate-load fill-teal-400 ease-linear'/>
+            <h3>Please wait...</h3>
+            
+        </div>
   </div>;
 }
 
