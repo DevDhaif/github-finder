@@ -17,7 +17,7 @@ function UserItem({user:{login,avatar_url}}) {
                 <h1 className='card-title '>
                         {login}
                 </h1>
-                <Link to={`/users/${login}`} className='text-base-content/50 items-baseline flex space-y-2 space-x-2 '>
+                <Link to={`/user/${login}`} className='text-base-content/50 items-baseline flex space-y-2 space-x-2 '>
                 <h2>
                 Visit 
                 </h2>
