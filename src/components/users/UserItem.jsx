@@ -2,8 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom';
 import { FaLongArrowAltRight } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 function UserItem({user:{login,avatar_url}}) {
-  return <div className='card compact mt-2 shadow-lg card-side bg-base-200/80'>
+  return <motion.div layout  className='card compact mt-2 shadow-lg card-side bg-base-200/80'>
             <div className='flex-row items-center space-x-4 card-body'>
                 <div>
                     <div className='avatar'>
@@ -27,7 +28,7 @@ function UserItem({user:{login,avatar_url}}) {
 
             </div>
             </div>
-          </div>;
+          </motion.div>;
 }
 UserItem.propTypes={
     user:PropTypes.object.isRequired

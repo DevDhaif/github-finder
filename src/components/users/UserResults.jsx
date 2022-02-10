@@ -2,6 +2,7 @@ import { useContext} from 'react';
 import { FaSpinner } from 'react-icons/fa';
 import UserItem from './UserItem';
 import GithubContext from '../../context/github/GithubContext';
+import { motion } from "framer-motion"
 
 function UserResults() {
   const {users,loading}=useContext(GithubContext)
@@ -15,12 +16,20 @@ function UserResults() {
     
     if(!loading){
   return (
-           <div className='grid grid-cols-1 gap-8 xl:grid-cols-4 lg:grid-cols-3  md:grid-cols-2'>
+           <div  className='grid grid-cols-1 gap-8 xl:grid-cols-4 lg:grid-cols-3  md:grid-cols-2'>
            
-
+            
             {users.map((user)=>(
-                
+                <motion.div  key={user.id} 
+
+                    initial={{ opacity: 0, y:100 }}
+                    animate={{ opacity: 1,y:1}}
+                    exit={{ opacity: 0 }}    
+                    
+                    transition={{ duration: 1  }}
+                >
                 <UserItem key={user.id} user={user}/>
+                </motion.div>
                 
             ))}
            </div>
