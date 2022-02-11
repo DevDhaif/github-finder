@@ -36,9 +36,7 @@ function Navbar({title}) {
     setEmoji('🌞')
 
   }
-  useEffect(()=>{
-    console.log('app test');
-  },[])
+  
 
   return (<nav className="navbar mb-8 shadow-lg bg-neutral text-neutral-content">
         <div className="container mx-auto">
