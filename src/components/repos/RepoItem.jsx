@@ -6,7 +6,7 @@ function RepoItem({repo}) {
     const {name,description,html_url,forks,open_issues,watchers_count,stargazers_count,language}=repo;
 
   return(
-      <div className='mb-2 rounded-md card bg-gray-800 hover:bg-gray-900'>
+      <div className='mb-2 rounded-md card bg-base-200 hover:bg-base-300 text-base-content'>
         <div className="card-body">
             <h3 className="mb2 text-xl font-semibold">
                 <a href={html_url}><FaLink className='inline mr-1 '/>{name}</a>
