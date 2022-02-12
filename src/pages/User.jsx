@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { FaCode,FaStore, FaUserFriends, FaUsers } from 'react-icons/fa';
 import Spinner from '../components/layout/Spinner';
 import ReposList from '../components/repos/ReposList';
-import {getUser,getUserRepos} from '../context/github/GithubAction'
+import {getUserAndRepos} from '../context/github/GithubAction'
 
 function User() {
 
@@ -16,11 +16,10 @@ function User() {
     useEffect(( ) => {
         dispatch({type:'SET_LOADING'})
         const getUserData=async ()=>{
-            const userData=await getUser(params.login)
-            dispatch({type:'GET_USER',payload:userData})
+            const userData=await getUserAndRepos(params.login)
+            dispatch({type:'GET_USER_AND_REPOS',payload:userData})
 
-            const userRepoData=await getUserRepos(params.login)
-            dispatch({type:'GET_REPOS',payload:userRepoData})
+            
         }
         getUserData()
     //   getUser(params.login)
