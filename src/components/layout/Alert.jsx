@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { FaClosedCaptioning, FaDoorClosed, FaTimes, FaTimesCircle, FaXing ,FaXmark} from "react-icons/fa";
+import { FaTimesCircle} from "react-icons/fa";
 import AlertContext from '../../context/alert/AlertContext';
 
 

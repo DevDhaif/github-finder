@@ -1,5 +1,4 @@
 import { FaSpinner } from 'react-icons/fa';
-import Loader from './assets/spinner.gif'
 function Spinner() {
   return <div>
  {/*<img src={Loader} alt="" />*/}

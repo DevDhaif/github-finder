@@ -2,10 +2,9 @@ import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
 function ThemeChanger() {
-    const [emoji,setEmoji]=useState('🌞')
     const [dropTheme,setDropTheme]=useState('dark')
-    const themes=['cupcake'
-  ,'dark'
+    const themes=[
+  'dark'
   ,'cupcake'
   ,'bumblebee'
   ,'emerald'

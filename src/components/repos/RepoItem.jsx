@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types'
-import { FaCodeBranch, FaEye, FaGithubAlt, FaInfo, FaLink, FaStar, FaUtensils } from 'react-icons/fa';
+import { FaCodeBranch, FaEye, FaInfo, FaLink, FaStar } from 'react-icons/fa';
 
 function RepoItem({repo}) {
     const {name,description,html_url,forks,open_issues,watchers_count,stargazers_count,language}=repo;

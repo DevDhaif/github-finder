@@ -1,5 +1,4 @@
-import { AnimatePresence, motion, transform,usePresence } from 'framer-motion';
-import React, { useEffect } from 'react';
+import { AnimatePresence, motion,usePresence } from 'framer-motion';
 import RepoItem from './RepoItem';
 
 function ReposList({repos}) {

@@ -2,8 +2,7 @@ import React, { useContext, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import GithubContext, { GithubProvider } from './context/github/GithubContext';
-import { createContext } from "react"
+
 
 
 ReactDOM.render(
