@@ -4,4 +4,4 @@ Made with React and Tailwind css
 
 Demo:
 
-https://github-finder-one-lake.vercel.app/user/DevDhaif
+https://github-finder-yk9420ulx-devdhaif.vercel.app/
