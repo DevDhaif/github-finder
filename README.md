@@ -4,4 +4,4 @@ Made with React and Tailwind css
 
 Demo:
 
-https://github-finder-yk9420ulx-devdhaif.vercel.app/
+https://github-getty.vercel.app/
